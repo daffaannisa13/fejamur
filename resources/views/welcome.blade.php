@@ -70,140 +70,47 @@
     </div>
 </section>
 
-<section class="produk-section" id="produk">
-    {{-- Section Title --}}
-    <div class="section-title">
-        <h2>Produk</h2>
-    </div>
 
-    {{-- Carousel --}}
-    <div class="produk-carousel-wrapper">
-        {{-- Navigation Prev --}}
-        <button class="produk-nav-btn produk-nav-prev">
-            <i class="fas fa-chevron-left"></i>
-        </button>
+<section id="produk" class="produk-section">
+    <h1>Produk</h1>
 
-        {{-- Swiper --}}
-        <div class="swiper produk-swiper">
-            <div class="swiper-wrapper">
-                {{-- Slide 1 --}}
-                <div class="swiper-slide">
-                    <div class="produk-card">
-                        <img src="{{ asset('assets/img/alda/produk-ayam-panggang.png') }}" alt="Keripik Jamur Rasa Ayam Panggang">
-                        <p class="produk-name">Keripik Jamur Rasa Ayam Panggang</p>
-                    </div>
-                </div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
 
-                {{-- Slide 2 --}}
-                <div class="swiper-slide">
-                    <div class="produk-card">
-                        <img src="{{ asset('assets/img/alda/produk-balado.png') }}" alt="Keripik Jamur Rasa Balado">
-                        <p class="produk-name">Keripik Jamur Rasa Balado</p>
-                    </div>
-                </div>
-
-                {{-- Slide 3 --}}
-                <div class="swiper-slide">
-                    <div class="produk-card">
-                        <img src="{{ asset('assets/img/alda/produk-original.png') }}" alt="Keripik Jamur Rasa Original">
-                        <p class="produk-name">Keripik Jamur Rasa Original</p>
-                    </div>
-                </div>
-
-                {{-- Slide 4 --}}
-                <div class="swiper-slide">
-                    <div class="produk-card">
-                        <img src="{{ asset('assets/img/alda/produk-pedas.png') }}" alt="Keripik Jamur Rasa Pedas">
-                        <p class="produk-name">Keripik Jamur Rasa Pedas</p>
-                    </div>
-                </div>
-
-                {{-- Slide 5 --}}
-                <div class="swiper-slide">
-                    <div class="produk-card">
-                        <img src="{{ asset('assets/img/alda/produk-bbq.png') }}" alt="Keripik Jamur Rasa BBQ">
-                        <p class="produk-name">Keripik Jamur Rasa BBQ</p>
-                    </div>
-                </div>
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-ayam-panggang.png') }}" alt="ayam panggang" />
+                <div class="produk-label">Kripik Jamur Rasa Ayam Panggang</div>
             </div>
 
-            {{-- Pagination --}}
-            <div class="produk-pagination"></div>
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-balado.png') }}" alt="balado" />
+                <div class="produk-label">Kripik Jamur Rasa Balado</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-bbq.png') }}" alt="bbq" />
+                <div class="produk-label">Kripik Jamur Rasa BBQ</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-original.png') }}" alt="original" />
+                <div class="produk-label">Kripik Jamur Rasa Original</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-pedas.png') }}" alt="pedas" />
+                <div class="produk-label">Kripik Jamur Rasa Pedas</div>
+            </div>
+
         </div>
 
-        {{-- Navigation Next --}}
-        <button class="produk-nav-btn produk-nav-next">
-            <i class="fas fa-chevron-right"></i>
-        </button>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 
-    {{-- Button Beli --}}
-    <div class="btn-beli-wrapper">
-        <a href="#" class="btn-beli-produk">Beli Sekarang</a>
-    </div>
+    <button class="btn-beli">Beli Sekarang</button>
 </section>
 
-{{-- Swiper JS - Letakkan setelah swiper-bundle.min.js --}}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var produkSwiper = new Swiper('.produk-swiper', {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        centeredSlides: true,
-        loop: true,
-        grabCursor: true,
-        
-        // Autoplay
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-
-        // Pagination
-        pagination: {
-            el: '.produk-pagination',
-            clickable: true,
-        },
-
-        // Navigation
-        navigation: {
-            nextEl: '.produk-nav-next',
-            prevEl: '.produk-nav-prev',
-        },
-
-        // Responsive breakpoints
-        breakpoints: {
-            0: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-            },
-            576: {
-                slidesPerView: 3,
-                spaceBetween: 15,
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            992: {
-                slidesPerView: 5,
-                spaceBetween: 20,
-            },
-        },
-    });
-
-    // Pause on hover
-    var swiperEl = document.querySelector('.produk-swiper');
-    if (swiperEl) {
-        swiperEl.addEventListener('mouseenter', function() {
-            produkSwiper.autoplay.stop();
-        });
-        swiperEl.addEventListener('mouseleave', function() {
-            produkSwiper.autoplay.start();
-        });
-    }
-});
-</script>
 
 <section class="ulasan-section" id="ulasan">
     {{-- Section Title --}}
@@ -269,3 +176,28 @@ document.addEventListener('DOMContentLoaded', function() {
         </main>
         <!-- main-area-end -->
         @endsection
+
+        @push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 5,
+        centeredSlides: true,
+        loop: true,
+        initialSlide: 2,
+        loopedSlides: 3,
+        spaceBetween: 30,
+        grabCursor: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: { slidesPerView: 1.5, spaceBetween: 10 },
+            480: { slidesPerView: 3, spaceBetween: 15 },
+            768: { slidesPerView: 5, spaceBetween: 30 },
+        },
+    });
+</script>
+@endpush
