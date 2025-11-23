@@ -77,7 +77,7 @@ body {
     font-weight: var(--tg-body-font-weight);
     font-size: var(--tg-body-font-size);
     line-height: var(--tg-body-line-height);
-    color: var(--tg-body-font-color);
+    color: var(--tg-white);
 	font-style: normal;
 }
 img,
@@ -1598,97 +1598,100 @@ body.search-visible {
     }
 }
 
-        body {
-            background-color: #2f4c38; /* hijau gelap */
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        h1 {
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-        /* Container Swiper */
-        .swiper {
-            width: 100%;
-            max-width: 800px;
-            padding-bottom: 70px; /* ruang untuk label & garis */
-            margin: 0 auto 30px;
-        }
+/* produk section */
 
-        /* Style slide produk */
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 0.5;
-            transition: opacity 0.3s;
-        }
+/* Produk Section */
+.produk-section {
+    background: #133223;
+    padding: 80px 0;
+    overflow: hidden;
+    text-align: center; /* Menjaga agar tombol beli dan slide berada di tengah */
+}
 
-        /* Produk tengah diperbesar dan opacity 1 */
-        .swiper-slide-active {
-            opacity: 1;
-        }
+/* Tombol Beli Sekarang */
+.btn-beli {
+    background-color: #edf4b2;
+    color: #2f4c38;
+    font-weight: bold;
+    padding: 10px 32px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 30px; /* Menambahkan jarak agar tidak menempel ke slider */
+}
 
-        .swiper-slide img {
-            width: 80px;
-            transition: width 0.3s ease;
-            cursor: pointer;
-        }
+.btn-beli:hover {
+    background-color: #d7e194;
+}
 
-        .swiper-slide-active img {
-            width: 180px;
-        }
+/* Swiper Container */
+.swiper {
+    width: 100%;
+    max-width: 1000px; /* Ukuran slider lebih besar */
+    padding-bottom: 70px;
+    margin: 0 auto 30px;
+}
 
-        /* Label produk hanya untuk slide aktif */
-        .produk-label {
-            margin-top: 10px;
-            font-size: 12px;
-            color: white;
-            opacity: 0;
-            height: 16px;
-            transition: opacity 0.3s;
-            user-select: none;
-        }
+/* Style Slide Produk */
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
 
-        .swiper-slide-active .produk-label {
-            opacity: 1;
-        }
+/* Produk Tengah Diperbesar */
+.swiper-slide-active {
+    opacity: 1;
+}
 
-        /* Garis putus-putus di bawah slide aktif */
-        .garis-aktif {
-            width: 140px;
-            border-top: 2px dotted white;
-            margin: 15px auto 0;
-        }
+/* Gambar Produk */
+.swiper-slide img {
+    width: 80px;
+    transition: width 0.3s ease;
+    cursor: pointer;
+}
 
-        /* Tombol beli */
-        .btn-beli {
-            background-color: #edf4b2;
-            color: #2f4c38;
-            font-weight: bold;
-            padding: 10px 32px;
-            border-radius: 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s;
-        }
-        .btn-beli:hover {
-            background-color: #d7e194;
-        }
+.swiper-slide-active img {
+    width: 180px;
+}
 
-        /* Navigation arrows */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: white;
-            top: 45%;
-        }
+/* Label Produk */
+.produk-label {
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    opacity: 0;
+    height: 16px;
+    transition: opacity 0.3s;
+    user-select: none;
+}
+
+.swiper-slide-active .produk-label {
+    opacity: 1;
+}
+
+/* Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    top: 45%;
+}
+
+/* Garis Putus-Putus di Bawah Slide Aktif */
+.garis-aktif {
+    width: 140px;
+    border-top: 2px dotted white;
+    margin: 15px auto 0;
+}
+
+
 /* === ULASAN SECTION === */
 .ulasan-section {
-    background: #1a1a1a;
+    background: #ffff;
     padding: 80px 0;
     overflow: visible;
 }
@@ -1702,7 +1705,7 @@ body.search-visible {
     font-family: 'Poppins', sans-serif;
     font-size: 42px;
     font-weight: 700;
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 /* Main Container */
@@ -1710,36 +1713,38 @@ body.search-visible {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 900px;
+    max-width: 1200px;  /* Adjusted for better spacing */
     margin: 0 auto;
+    gap: 20px;
     padding: 0 20px;
-    position: relative;
+    position: nowrap;
 }
 
 /* Side Card (Kiri & Kanan) */
 .ulasan-side {
-    flex: 0 0 180px;
+    flex: 0 0 265px;
 }
 
 .ulasan-side-card {
     background: #133223;
     border-radius: 15px;
-    padding: 80px 25px;
+    padding: 30px 20px;  /* Adjusted padding for balance */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
 }
 
 .ulasan-side-card .side-avatar {
-    width: 60px;
-    height: 60px;
+    width: 80px;  /* Adjusted to make the image more proportionate */
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px;
     border: 2px solid #4a7c4e;
-    opacity: 0.7;
+    opacity: 0.85;  /* Slightly reduced opacity */
 }
 
 .ulasan-side-card .side-avatar img {
@@ -1755,7 +1760,7 @@ body.search-visible {
 
 .ulasan-side-card .side-rating i {
     color: #ffd700;
-    font-size: 16px;
+    font-size: 18px; /* Increased font size for better visibility */
 }
 
 /* Center Card (Utama) */
@@ -1766,16 +1771,16 @@ body.search-visible {
 }
 
 .ulasan-center-card {
-    background: #f5f5f0;
+    background: #133223;
     border-radius: 20px;
-    padding: 35px 30px;
+    padding: 25px 20px;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .ulasan-center-card .center-avatar {
-    width: 90px;
-    height: 90px;
+    width: 100px;  /* Adjusted size for center image */
+    height: 100px;
     border-radius: 50%;
     margin: 0 auto 12px;
     overflow: hidden;
@@ -1790,9 +1795,9 @@ body.search-visible {
 
 .ulasan-center-card .center-name {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    color: #5a8f5c;
+    color: #ffff;
     margin-bottom: 8px;
 }
 
@@ -1805,33 +1810,33 @@ body.search-visible {
 
 .ulasan-center-card .center-rating i {
     color: #ffd700;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .ulasan-center-card .center-review {
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    color: #555555;
+    font-size: 14px;  /* Adjusted for better readability */
+    color: #ffff;
     line-height: 1.7;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .ulasan-side {
-        flex: 0 0 120px;
+        flex: 0 0 220px;
     }
 
     .ulasan-side-card {
-        padding: 60px 15px;
+        padding: 40px 15px;
     }
 
     .ulasan-side-card .side-avatar {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .ulasan-side-card .side-rating i {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .ulasan-center {
@@ -1844,12 +1849,12 @@ body.search-visible {
     }
 
     .ulasan-center-card .center-avatar {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
     }
 
     .ulasan-center-card .center-review {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -1863,7 +1868,7 @@ body.search-visible {
     }
 
     .ulasan-side {
-        flex: 0 0 80px;
+        flex: 0 0 150px;
     }
 
     .ulasan-side-card {
@@ -1872,13 +1877,12 @@ body.search-visible {
     }
 
     .ulasan-side-card .side-avatar {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
     }
 
     .ulasan-side-card .side-rating i {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .ulasan-center {
@@ -1908,6 +1912,7 @@ body.search-visible {
         font-size: 10px;
     }
 }
+
 
 
 /* ========================================
@@ -2690,7 +2695,7 @@ body.search-visible {
 	opacity: 1;
 }
 .footer-top-wrap {
-	background: #0A0A0A;
+	background: #133223;
 	position: relative;
 	padding: 195px 0 30px;
 	overflow-x: hidden;
@@ -2706,7 +2711,7 @@ body.search-visible {
 	top: -22px;
 	width: 100%;
 	height: 53px;
-	background-image: url(../img/bg/footer_bg_shape.png);
+	background: #133223;
 	background-repeat: repeat;
 	background-position: center;
 	z-index: -1;
@@ -2734,7 +2739,7 @@ body.search-visible {
 }
 .footer-widget .footer-text p {
 	margin: 0 0;
-	color: var(--tg-white);
+	color: #ffff;
 	opacity: .7;
 }
 .footer-social {
@@ -2751,14 +2756,14 @@ body.search-visible {
 	justify-content: center;
 	background: #1B1B1B;
 	border-radius: 50%;
-	color: var(--tg-white);
+	color: var(--tg-black);
 }
 .footer-social a:hover {
 	background: var(--tg-secondary-color);
 }
 .footer-widget .fw-title {
 	font-size: 20px;
-	color: var(--tg-white);
+	color: #ffff;
 	letter-spacing: 0.02em;
 	margin: 0 0 30px;
 }
@@ -2769,7 +2774,7 @@ body.search-visible {
 	margin: 0 0;
 }
 .footer-widget ul li a {
-	color: var(--tg-white);
+	color: #ffff;
 	opacity: .7;
 }
 .footer-widget ul li a:hover {
@@ -3019,13 +3024,13 @@ body.search-visible {
 
 /* Footer */
 .footer-two-top-wrap {
-	background-image: url(../img/bg/footer_bg.jpg);
+	background: #133223;
 	background-position: center;
 	background-size: cover;
 	padding: 100px 0 50px;
 }
 .footer-two-top-wrap .footer-social a {
-	background: #2d2d2d;
+	background: #D5F96D;
 }
 .footer-two-top-wrap .footer-social a:hover {
 	background: #63af21;
@@ -3297,7 +3302,7 @@ body.search-visible {
     border-bottom: none;
 }
 .menu-area-two.sticky-menu .header-action-two .list-wrap li a {
-    border-left: 1px solid var(--tg-gray);
+    border-left: 1px solid var(--tg-white);
 }
 .menu-area-two.sticky-menu .header-action-two .list-wrap li a:hover {
     color: var(--tg-primary-color);
@@ -3357,12 +3362,12 @@ body.search-visible {
 .footer-text-two p {
     margin-bottom: 0;
     font-size: 15px;
-    color: var(--tg-white);
+    color: #ffff;
 }
 .footer-social-two a {
     width: 45px;
     height: 45px;
-    background: rgba(255 255 255 / 10%);
+    background: rgba(0, 0, 0, 0.1);
 }
 .footer-social-two a:hover {
     background: var(--tg-primary-color);

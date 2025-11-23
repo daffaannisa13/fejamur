@@ -71,11 +71,39 @@
 </section>
 
 
-<section id="produk" class="produk-section">
-    <h1>Produk</h1>
+<section class="produk-section" id="produk">
+    {{-- Section Title --}}
+    <div class="section-title">
+        <h2>Produk</h2>
+    </div>
 
     <div class="swiper">
         <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-ayam-panggang.png') }}" alt="ayam panggang" />
+                <div class="produk-label">Kripik Jamur Rasa Ayam Panggang</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-balado.png') }}" alt="balado" />
+                <div class="produk-label">Kripik Jamur Rasa Balado</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-bbq.png') }}" alt="bbq" />
+                <div class="produk-label">Kripik Jamur Rasa BBQ</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-original.png') }}" alt="original" />
+                <div class="produk-label">Kripik Jamur Rasa Original</div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/img/alda/produk-pedas.png') }}" alt="pedas" />
+                <div class="produk-label">Kripik Jamur Rasa Pedas</div>
+            </div>
 
             <div class="swiper-slide">
                 <img src="{{ asset('assets/img/alda/produk-ayam-panggang.png') }}" alt="ayam panggang" />
@@ -118,60 +146,89 @@
         <h2>Ulasan Pelanggan</h2>
     </div>
 
-    {{-- Ulasan Cards Container --}}
-    <div class="ulasan-container">
-        {{-- Side Card Kiri --}}
-        <div class="ulasan-side">
-            <div class="ulasan-side-card">
-                <div class="side-avatar">
-                    <img src="https://i.pravatar.cc/150?img=11" alt="User">
-                </div>
-                <div class="side-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
+  <div class="ulasan-container">
+    {{-- Side Card Kiri --}}
+    <div class="ulasan-side">
+        <div class="ulasan-side-card">
+            <div class="side-avatar">
+                <img src="https://i.pravatar.cc/150?img=11" alt="User">
             </div>
-        </div>
-
-        {{-- Center Card (Utama) --}}
-        <div class="ulasan-center">
-            <div class="ulasan-center-card">
-                <div class="center-avatar">
-                    <img src="https://i.pravatar.cc/150?img=33" alt="User">
-                </div>
-                <h4 class="center-name">Nama User</h4>
-                <div class="center-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="center-review">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat, nisi nec ullamcorper efficitur, turpis est hendrerit neque, nec tempus sapien tellus et sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </p>
-            </div>
-        </div>
-
-        {{-- Side Card Kanan --}}
-        <div class="ulasan-side">
-            <div class="ulasan-side-card">
-                <div class="side-avatar">
-                    <img src="https://i.pravatar.cc/150?img=15" alt="User">
-                </div>
-                <div class="side-rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
+            <div class="side-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
             </div>
         </div>
     </div>
+
+    <div class="ulasan-side">
+        <div class="ulasan-side-card">
+            <div class="side-avatar">
+                <img src="https://i.pravatar.cc/150?img=12" alt="User">
+            </div>
+            <div class="side-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+    {{-- Center Card (Utama) --}}
+    <div class="ulasan-center">
+        <div class="ulasan-center-card">
+            <div class="center-avatar">
+                <img src="https://i.pravatar.cc/150?img=33" alt="User">
+            </div>
+            <h4 class="center-name">Nama User</h4>
+            <div class="center-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="center-review">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat, nisi nec ullamcorper efficitur, turpis est hendrerit neque, nec tempus sapien tellus et sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+        </div>
+    </div>
+
+    {{-- Side Card Kanan --}}
+    <div class="ulasan-side">
+        <div class="ulasan-side-card">
+            <div class="side-avatar">
+                <img src="https://i.pravatar.cc/150?img=14" alt="User">
+            </div>
+            <div class="side-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="ulasan-side">
+        <div class="ulasan-side-card">
+            <div class="side-avatar">
+                <img src="https://i.pravatar.cc/150?img=15" alt="User">
+            </div>
+            <div class="side-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
         </main>
         <!-- main-area-end -->
@@ -181,23 +238,25 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <script>
-    const swiper = new Swiper(".swiper", {
-        slidesPerView: 5,
-        centeredSlides: true,
-        loop: true,
-        initialSlide: 2,
-        loopedSlides: 3,
-        spaceBetween: 30,
-        grabCursor: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            0: { slidesPerView: 1.5, spaceBetween: 10 },
-            480: { slidesPerView: 3, spaceBetween: 15 },
-            768: { slidesPerView: 5, spaceBetween: 30 },
-        },
-    });
+   const swiper = new Swiper(".swiper", {
+    slidesPerView: 5,  
+    centeredSlides: true,  
+    loop: true,
+    initialSlide: 2,  
+    loopedSlides: 10, 
+    spaceBetween: 20, 
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: { slidesPerView: 1.5, spaceBetween: 10 },
+        480: { slidesPerView: 3, spaceBetween: 15 },
+        768: { slidesPerView: 5, spaceBetween: 30 },
+    },
+});
+
+
 </script>
 @endpush
