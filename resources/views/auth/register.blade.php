@@ -11,7 +11,7 @@
 
             <!-- BAGIAN KIRI (LOGO) -->
             <div class="register-alda-left">
-                <img src="{{ asset('assets/img/alda/mascot.png') }}" alt="Logo ALDA" class="register-logo">
+                <img src="{{ asset('assets/img/alda/logo.png') }}" alt="Logo ALDA" class="register-logo">
             </div>
 
             <!-- BAGIAN KANAN (FORM) -->

@@ -28,7 +28,7 @@
         </div>
     </nav>
 </div>
-<section class="hero-alda" style="background-image: url('{{ asset('assets/img/alda/bg.png') }}');">
+<section class="hero-alda" style="background-image: url('{{ asset('assets/img/alda/Background.png') }}');">
     <div class="container hero-content">
         <div class="row align-items-center justify-content-between">
             {{-- Text Content --}}
