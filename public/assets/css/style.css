@@ -3403,171 +3403,437 @@ body.search-visible {
     padding: 35px 0;
 }
 
-/* login */
-.singUp-wrap {
-    background: var(--tg-gray-two);
-    border: 1px solid #E1E1E1;
-    border-radius: 8px;
-    padding: 30px 50px 40px;
-}
-.singUp-wrap .title {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-.singUp-wrap p {
-    margin-bottom: 25px;
-}
-.account__social-btn {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--tg-white);
-    border: 1px solid #E1E1E1;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
-    font-size: 16px;
-    gap: 10px;
-    color: var(--tg-heading-font-color);
-    padding: 10px 20px;
-}
-.account__social-btn:hover {
-    color: var(--tg-primary-color);
-    border-color: var(--tg-primary-color);
-}
-.account__divider {
+/* === LOGIN ALDA STYLE === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+/* BACKGROUND LOGIN */
+.login-alda-section {
+    min-height: 100vh;
+    width: 100%;
     position: relative;
-    text-align: center;
-    padding-block-end: 35px;
-    margin-block-start: 35px;
-}
-.account__divider::before {
-    content: "";
-    height: 1px;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background: #E1E1E1;
-    position: absolute;
-}
-.account__divider span {
-    font-size: 16px;
-    color: var(--tg-heading-font-color);
-    padding: 20px;
-    top: -35px;
-    left: 45%;
-    position: absolute;
-    background: #F7F7FA;
-}
-.account__form .form-grp {
-    margin-bottom: 20px;
-}
-.account__form .form-grp label {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1;
-    margin-bottom: 10px;
-    color: var(--tg-heading-font-color);
-}
-.account__form .form-grp input {
-    width: 100%;
-    padding: 15px 20px;
-    font-size: 16px;
-    color: var(--tg-heading-font-color);
-    border: 1px solid #E1E1E1;
-    background: var(--tg-white);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
-    line-height: 1;
-    -webkit-transition: all 0.3s ease-out 0s;
-    -moz-transition: all 0.3s ease-out 0s;
-    -ms-transition: all 0.3s ease-out 0s;
-    -o-transition: all 0.3s ease-out 0s;
-    transition: all 0.3s ease-out 0s;
-}
-.account__form .form-grp input::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--tg-body-font-color);
-    opacity: .8;
-    text-transform: capitalize;
-}
-.account__form .form-grp input:focus {
-    border-color: var(--tg-primary-color);
-}
-.account__check {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: space-between;
-}
-.account__check-remember {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    gap: 5px;
-}
-.account__check-remember input {
-    width: 20px;
-    height: 20px;
-    margin-inline-end: 3px;
-    margin-top: 2px;
-}
-.account__check-remember label {
-    user-select: none;
-    color: var(--tg-heading-font-color);
-}
-.account__check-remember input:focus {
-    box-shadow: none;
-}
-.account__check-remember input:checked {
-    background-color: var(--tg-primary-color);
-    border-color: var(--tg-primary-color);
-}
-.account__check-forgot a {
-    color: var(--tg-primary-color);
-    font-size: 16px;
-    text-decoration: underline;
-}
-.account__form .btn {
-    width: 100%;
-    justify-content: center;
-    margin-top: 20px;
-}
-.account__switch {
-    margin-top: 30px;
-}
-.account__switch p {
-    margin-bottom: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-}
-.account__switch p a {
-    color: var(--tg-primary-color);
-    text-decoration: underline;
-}
-.account__switch p a:hover {
-    color: var(--tg-secondary-color);
+    overflow: hidden;
+    
+    /* Warna hijau sebagai base */
+    background: linear-gradient(135deg, #1a4d3a 0%, #0d2e1f 100%);
+    font-family: 'Montserrat', sans-serif;  /* ← INI FONT MONTSERRAT */
 }
 
+/* PATTERN/TEXTURE TRANSPARAN DI ATAS */
+.login-alda-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/img/alda/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+
+
+/* CONTAINER UTAMA */
+.login-alda-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+
+.login-alda-card {
+    width: 950px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* LEFT */
+.login-alda-left {
+    width: 45%;
+    background-color: #0f2b1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.login-alda-left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 140px;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.login-logo {
+    width: 260px;
+}
+
+/* RIGHT */
+.login-alda-right {
+    width: 55%;
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0f2b1f;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.form-grp {
+    margin-bottom: 18px;
+}
+
+.form-grp label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.form-grp input {
+    width: 100%;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.form-grp input:focus {
+    border-color: #0f2b1f;
+}
+
+.account__check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.account__check-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.account__check-remember input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #1a4d3a;
+}
+
+.account__check-remember label {
+    font-size: 13px;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+}
+
+.account__check-forgot a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.account__check-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* BUTTON */
+.login-btn {
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #1a4d3a 0%, #0d2e1f 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 77, 58, 0.3);
+    width: 100%;
+}
+
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 77, 58, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .login-alda-card {
+        flex-direction: column;
+        height: auto;
+        margin: 20px;
+    }
+
+    .login-alda-left,
+    .login-alda-right {
+        width: 100%;
+    }
+
+    .login-alda-left::after {
+        display: none;
+    }
+
+    .login-logo {
+        width: 200px;
+        margin: 40px 0;
+    }
+}
+
+
+/* === REGISTER ALDA STYLE === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+/* BACKGROUND */
+.register-alda-section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #133223;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PATTERN/TEXTURE TRANSPARAN DI ATAS */
+.register-alda-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/img/alda/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* CONTAINER UTAMA */
+.register-alda-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* CARD */
+.register-alda-card {
+    width: 1000px;
+    min-height: 580px;
+    max-height: 90vh;
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    overflow: visible;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* LEFT SIDE (LOGO) */
+.register-alda-left {
+    width: 45%;
+    background: #133223;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.register-alda-left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 140px;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.register-logo {
+    width: 280px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* RIGHT SIDE (FORM) */
+.register-alda-right {
+    width: 55%;
+    padding: 40px 70px 40px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.register-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #133223;
+    margin-bottom: 6px;
+}
+
+.register-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.register-form-grp {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.register-form-grp label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.register-form-grp input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #E5E5E5;
+    background: #FAFAFA;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.register-form-grp input:focus {
+    border-color: #133223;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(19, 50, 35, 0.1);
+}
+
+.register-form-grp input::placeholder {
+    color: #AAAAAA;
+}
+
+/* BUTTON */
+.register-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background: #133223;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-btn:hover {
+    background: #0d2e1f;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.register-btn:active {
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .register-alda-card {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .register-alda-left,
+    .register-alda-right {
+        width: 100%;
+    }
+
+    .register-alda-left {
+        clip-path: none;
+        padding: 40px 20px;
+        min-height: 250px;
+    }
+    
+    .register-alda-left::after {
+        display: none;
+    }
+
+    .register-logo {
+        width: 200px;
+    }
+
+    .register-alda-right {
+        padding: 40px 30px;
+    }
+
+    .register-title {
+        font-size: 28px;
+    }
+
+    .register-subtitle {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-alda-container {
+        padding: 20px;
+    }
+
+    .register-alda-right {
+        padding: 30px 25px;
+    }
+
+    .register-form-grp input {
+        padding: 10px 14px;
+    }
+}

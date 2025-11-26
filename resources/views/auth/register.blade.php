@@ -1,61 +1,59 @@
 @extends('layouts.app')
 
-@section('title', 'Register')
+@section('title', 'Register Page')
 
 @section('content')
 
-<section class="singUp-area section-py-130">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-8">
+<section class="register-alda-section">
+    <div class="register-alda-container">
 
-                <div class="singUp-wrap">
-                    <h2 class="title">Create Your Account</h2>
+        <div class="register-alda-card">
 
-                    <form action="#" method="POST" class="account__form">
-                        @csrf
+            <!-- BAGIAN KIRI (LOGO) -->
+            <div class="register-alda-left">
+                <img src="{{ asset('assets/img/alda/mascot.png') }}" alt="Logo ALDA" class="register-logo">
+            </div>
 
-                        <div class="row gutter-20">
-                            <div class="col-md-6">
-                                <div class="form-grp">
-                                    <label>First Name</label>
-                                    <input type="text" name="first_name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-grp">
-                                    <label>Last Name</label>
-                                    <input type="text" name="last_name">
-                                </div>
-                            </div>
-                        </div>
+            <!-- BAGIAN KANAN (FORM) -->
+            <div class="register-alda-right">
 
-                        <div class="form-grp">
-                            <label>Email</label>
-                            <input type="email" name="email">
-                        </div>
+                <h2 class="register-title">Registrasi</h2>
+                <p class="register-subtitle">Login to your account continue</p>
 
-                        <div class="form-grp">
-                            <label>Password</label>
-                            <input type="password" name="password">
-                        </div>
+                <form action="#" class="register__form">
 
-                        <div class="form-grp">
-                            <label>Confirm Password</label>
-                            <input type="password" name="password_confirmation">
-                        </div>
-
-                        <button class="btn btn-two btn-sm">Sign Up</button>
-                    </form>
-
-                    <div class="account__switch">
-                        <p>Already have an account? <a href="{{ url('login') }}">Login</a></p>
+                    <div class="register-form-grp">
+                        <label for="nama">Nama</label>
+                        <input id="nama" type="text" placeholder="Masukkan Nama...">
                     </div>
 
-                </div>
+                    <div class="register-form-grp">
+                        <label for="phone">No. Handphone</label>
+                        <input id="phone" type="text" placeholder="Masukkan No. Handphone...">
+                    </div>
+
+                    <div class="register-form-grp">
+                        <label for="alamat">Alamat</label>
+                        <input id="alamat" type="text" placeholder="Masukkan Alamat...">
+                    </div>
+
+                    <div class="register-form-grp">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="Masukkan Email...">
+                    </div>
+
+                    <div class="register-form-grp">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Masukkan Password...">
+                    </div>
+
+                    <button type="submit" class="register-btn">Masuk</button>
+
+                </form>
 
             </div>
         </div>
+
     </div>
 </section>
 

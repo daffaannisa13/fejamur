@@ -4,49 +4,53 @@
 
 @section('content')
 
-    <!-- login -->
-    <section class="singUp-area section-py-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-8">
-                    <div class="singUp-wrap">
+<section class="login-alda-section">
+    <div class="login-alda-container">
 
-                        <h2 class="title">Welcome back!</h2>
-                        <p>Hey there! Ready to log in?</p>
+        <div class="login-alda-card">
 
-                        <form action="#" class="account__form">
-                            <div class="form-grp">
-                                <label for="email">Email</label>
-                                <input id="email" type="text" placeholder="email">
-                            </div>
+            <!-- BAGIAN KIRI (LOGO) -->
+            <div class="login-alda-left">
+                <img src="{{ asset('assets/img/alda/mascot.png') }}" alt="Logo ALDA" class="login-logo">
+            </div>
 
-                            <div class="form-grp">
-                                <label for="password">Password</label>
-                                <input id="password" type="password" placeholder="password">
-                            </div>
+            <!-- BAGIAN KANAN (FORM) -->
+            <div class="login-alda-right">
 
-                            <div class="account__check">
-                                <div class="account__check-remember">
-                                    <input type="checkbox" id="terms-check">
-                                    <label for="terms-check">Remember me</label>
-                                </div>
+                <h2 class="login-title">Login</h2>
+                <p class="login-subtitle">Login to your account continue</p>
 
-                                <div class="account__check-forgot">
-                                    <a href="{{ url('/reset-password') }}">Forgot Password?</a>
-                                </div>
-                            </div>
+                <form action="#" class="account__form">
 
-                            <button type="submit" class="btn btn-two btn-sm" style="border-radius: 5px;">Sign In</button>
-                        </form>
+                    <div class="form-grp">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="Masukkan Email...">
+                    </div>
 
-                        <div class="account__switch">
-                            <p>Don't have an account? <a href="{{ url('/register') }}">Sign Up</a></p>
+                    <div class="form-grp">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Masukkan Password...">
+                    </div>
+
+                    <div class="account__check">
+                        <div class="account__check-remember">
+                            <input type="checkbox" id="terms-check">
+                            <label for="terms-check">Ingat saya</label>
                         </div>
 
+                        <div class="account__check-forgot">
+                            <a href="{{ url('/reset-password') }}">Lupa Password?</a>
+                        </div>
                     </div>
-                </div>
+
+                    <button type="submit" class="login-btn">Masuk</button>
+
+                </form>
+
             </div>
         </div>
-    </section>
+
+    </div>
+</section>
 
 @endsection
